@@ -15,8 +15,6 @@ A Claude Code plugin that generates professional sales proposals from unstructur
 
 ## Installation
 
-### As a Claude Code plugin
-
 ```bash
 # Test locally
 claude --plugin-dir ./gamma-sales-proposal
@@ -69,20 +67,11 @@ gamma-sales-proposal/
 │       ├── SKILL.md             # Skill definition
 │       └── references/
 │           └── gamma-api.md     # Gamma API reference
-├── src/
-│   ├── gamma/client.ts          # Gamma API client
-│   ├── engine/
-│   │   ├── document-builder.ts
-│   │   └── proposal-template.ts
-│   └── data/types.ts            # Gamma API types
 ├── data/
 │   ├── my-products/             # Your product/pricing info
 │   └── references/              # Past proposal references
-├── output/
-│   └── draft/                   # Generated markdown drafts
 ├── .env.example
-├── package.json
-├── tsconfig.json
+├── .gitignore
 └── LICENSE
 ```
 

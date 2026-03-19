@@ -113,12 +113,6 @@ GET {exportUrl}
 X-API-KEY: {key}
 ```
 
-## Code References
-
-- TypeScript client: `src/gamma/client.ts`
-- Document builder: `src/engine/document-builder.ts`
-- Types: `src/data/types.ts`
-
 ## Tips
 
 - `cardSplit: 'inputTextBreaks'` + `\n---\n` gives precise section-to-card mapping

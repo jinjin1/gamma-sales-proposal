@@ -111,6 +111,4 @@ data/my-products/    # Product & pricing info (created on first use, reused late
 data/references/     # Past successful proposals for tone/structure reference
 output/draft/        # Markdown drafts
 output/              # Final PDF/PPTX/PNG exports
-src/gamma/client.ts  # Gamma API client (TypeScript)
-src/engine/          # Document builder, proposal template utilities
 ```
