@@ -6,6 +6,17 @@ description: >
   then converts them into Gamma presentations, documents, or webpages.
   Trigger: "proposal", "제안서", "견적서", "RFP response", "create a proposal",
   "write a quote", or any request to generate a sales proposal after a customer meeting.
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - AskUserQuestion
+  - WebFetch
+  - WebSearch
+  - Agent
 ---
 
 # /gamma-proposal:proposal
