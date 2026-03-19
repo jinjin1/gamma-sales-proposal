@@ -71,15 +71,16 @@ If not set, the plugin will ask for the key on first use. Without a key, proposa
 /gamma-proposal:proposal
 ```
 
-The plugin walks you through a 7-step workflow:
+The plugin walks you through an 8-step workflow:
 
-1. **Context** — Paste meeting notes, RFP, or customer description
-2. **Products** — Load saved product info or provide new
-3. **References** — Optionally use past proposals as templates
-4. **Draft** — AI generates a structured proposal
-5. **Review** — Approve, edit sections, or regenerate
-6. **Generate** — Convert to Gamma presentation/document/webpage
-7. **Done** — Get draft path, Gamma URL, and exported file
+1. **API Key Check** — Verify Gamma API key (skip for markdown-only output)
+2. **Context** — Paste meeting notes, RFP, or customer description
+3. **Products** — Load saved product info or provide new
+4. **References** — Optionally use past proposals as templates
+5. **Draft** — AI generates a structured proposal
+6. **Review** — Approve, edit sections, or regenerate
+7. **Generate** — Convert to Gamma presentation/document/webpage
+8. **Done** — Get draft path, Gamma URL, and exported file
 
 ## Project structure
 
