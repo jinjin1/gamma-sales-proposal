@@ -13,7 +13,28 @@ A Claude Code plugin that generates professional sales proposals from unstructur
 - **Multi-language** — Outputs in the user's language automatically
 - **Human-in-the-loop** — Review, edit, or regenerate before final output
 
+## Prerequisites
+
+- [Claude Code](https://claude.ai/claude-code) v1.0.33+
+- A [Gamma API key](https://gamma.app/settings/api-keys) (Pro, Ultra, Teams, or Business plan)
+
 ## Installation
+
+### Install via Plugin Marketplace (in a Claude Code session)
+
+Add the marketplace:
+
+```
+/plugin marketplace add jinjin1/gamma-sales-proposal
+```
+
+Install the plugin:
+
+```
+/plugin install gamma-proposal@gamma-sales-proposal-marketplace
+```
+
+### Local Development
 
 Clone the repository:
 
@@ -27,18 +48,15 @@ Load as a local plugin:
 claude --plugin-dir ./gamma-sales-proposal
 ```
 
-### Prerequisites
-
-- [Claude Code](https://claude.ai/claude-code) v1.0.33+
-- A [Gamma API key](https://gamma.app/settings/api-keys) (Pro plan or above)
-
 ## Setup
 
-1. Create a `.env` file in your working directory:
+Set your Gamma API key:
 
 ```bash
-GAMMA_API_KEY=your-gamma-api-key
+export GAMMA_API_KEY="your-gamma-api-key"
 ```
+
+You can get your API key from [Gamma Account Settings > API Keys](https://gamma.app/settings/api-keys).
 
 2. (Optional) Add your product/pricing info to `data/my-products/products.md` — or the plugin will ask you on first use.
 
