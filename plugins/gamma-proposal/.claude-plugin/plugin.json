@@ -1,7 +1,7 @@
 {
   "name": "gamma-proposal",
   "description": "AI-powered sales proposal generator. Transforms meeting notes, RFPs, and emails into polished proposals, then converts them into presentations, documents, or webpages via Gamma API.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "jin"
   },
