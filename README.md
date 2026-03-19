@@ -16,11 +16,9 @@ A Claude Code plugin that generates professional sales proposals from unstructur
 ## Installation
 
 ```bash
-# Test locally
+# Clone and load as a local plugin
+git clone https://github.com/jinjin1/gamma-sales-proposal.git
 claude --plugin-dir ./gamma-sales-proposal
-
-# Or install from a marketplace
-claude plugin install gamma-proposal@your-marketplace
 ```
 
 ### Prerequisites
