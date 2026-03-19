@@ -1,0 +1,13 @@
+{
+  "name": "gamma-sales-proposal-marketplace",
+  "owner": {
+    "name": "Yongjin Jin"
+  },
+  "plugins": [
+    {
+      "name": "gamma-proposal",
+      "source": "./plugins/gamma-proposal",
+      "description": "AI-powered sales proposal generator. Transforms meeting notes, RFPs, and emails into polished proposals via Gamma API."
+    }
+  ]
+}

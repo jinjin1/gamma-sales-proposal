@@ -31,7 +31,7 @@ Add the marketplace:
 Install the plugin:
 
 ```
-/plugin install gamma-proposal@gamma-sales-proposal-marketplace
+/plugin install gamma-proposal@gamma-sales-proposal
 ```
 
 ### Local Development
