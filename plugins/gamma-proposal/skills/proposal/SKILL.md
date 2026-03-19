@@ -28,13 +28,17 @@ Gamma presentation/document/webpage with PDF/PPTX/PNG export.
 extracted summaries, and the final proposal — must be in that language. If the input
 mixes languages, prefer the language used for business context.
 
-## Step 0: Check API Key
+**EXECUTION ORDER: Steps MUST be executed in strict sequential order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8. Never skip or reorder steps.**
+
+## Step 1: Check API Key
+
+**CRITICAL: You MUST execute this step BEFORE doing anything else. Do NOT skip to Step 2.**
 
 ```bash
 echo "${GAMMA_API_KEY:+set}"
 ```
 
-If not set, guide the user:
+If the output is empty (key not set), guide the user:
 
 > You need a Gamma API key to generate Gamma documents.
 >
@@ -51,7 +55,7 @@ for the session.
 If the user wants to skip Gamma generation, proceed without a key — the workflow will
 produce a markdown draft only.
 
-## Step 1: Collect context
+## Step 2: Collect context
 
 Ask the user for customer information. Accept any format: meeting notes, call transcripts,
 RFP documents, email threads, or free-form descriptions.
@@ -64,7 +68,7 @@ Extract from the unstructured input:
 
 Show the extracted summary and ask the user to confirm. Mark missing items as *(not mentioned)*.
 
-## Step 2: Product & pricing info
+## Step 3: Product & pricing info
 
 Check `data/my-products/` in the working directory.
 
@@ -72,12 +76,12 @@ Check `data/my-products/` in the working directory.
 - **Empty / missing**: Ask the user to provide product info (file path, URL, or paste).
   Save to `data/my-products/products.md` for reuse in future proposals.
 
-## Step 3: Reference proposals (optional)
+## Step 4: Reference proposals (optional)
 
 Check `data/references/` for past successful proposals. If available, use them as
 tone/structure references. If not, proceed with the default 6-section structure.
 
-## Step 4: Draft the proposal
+## Step 5: Draft the proposal
 
 **Default structure** (override with reference proposal structure if available):
 
@@ -97,16 +101,16 @@ Insert `\n---\n` between sections for Gamma card splitting.
 
 Save to: `output/draft/{companyName}_{YYYY-MM-DD}_proposal.md`
 
-## Step 5: Review
+## Step 6: Review
 
 Show a section-by-section summary and ask the user:
-- **Approve** → proceed to Step 6
+- **Approve** → proceed to Step 7
 - **Edit** → revise specific sections, then re-summarize
-- **Regenerate** → re-run Step 4
+- **Regenerate** → re-run Step 5
 
-## Step 6: Gamma document generation
+## Step 7: Gamma document generation
 
-If no API key was set in Step 0, skip to Step 7 with markdown draft only.
+If no API key was set in Step 1, skip to Step 8 with markdown draft only.
 
 After approval, ask the user for output preferences:
 
@@ -195,7 +199,7 @@ curl -s -o "output/{filename}.{format}" -H "X-API-KEY: ${GAMMA_API_KEY}" "${EXPO
 If the user provides a customer email, include `sharingOptions.emailOptions` in the
 generation request to send a view-only Gamma link.
 
-## Step 7: Done
+## Step 8: Done
 
 Report: draft file path, Gamma URL, exported file path.
 
@@ -203,7 +207,7 @@ Report: draft file path, Gamma URL, exported file path.
 
 | Error | Action |
 |-------|--------|
-| Key not set | Show setup guide from Step 0 |
+| Key not set | Show setup guide from Step 1 |
 | 401 | Ask to verify API key |
 | 402 | Direct to Gamma dashboard to add credits |
 | 429 | Wait and retry |
