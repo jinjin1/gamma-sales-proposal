@@ -56,11 +56,14 @@ Set your Gamma API key:
 export GAMMA_API_KEY="your-gamma-api-key"
 ```
 
-You can get your API key from [Gamma Account Settings > API Keys](https://gamma.app/settings/api-keys).
+Get your API key from [Gamma](https://gamma.app) > Profile > **Account Settings** > **API Keys** > **Create API Key** (requires Pro, Ultra, Teams, or Business plan).
 
-2. (Optional) Add your product/pricing info to `data/my-products/products.md` — or the plugin will ask you on first use.
+If not set, the plugin will ask for the key on first use. Without a key, proposals are saved as markdown drafts only.
 
-3. (Optional) Drop past successful proposals into `data/references/` for tone/structure reference.
+**Optional:**
+
+- Add your product/pricing info to `data/my-products/products.md` — or the plugin will ask on first use
+- Drop past successful proposals into `data/references/` for tone/structure reference
 
 ## Usage
 
