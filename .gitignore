@@ -1,0 +1,8 @@
+node_modules
+.env
+dist
+output/
+.claude/settings.local.json
+data/my-products/*.md
+data/references/*
+!data/references/.gitkeep
